@@ -40,7 +40,7 @@ def product_searching(context, product):
     search
 
     :param product: Holding The Value Of Product For Search
-
+    :type   product: str
     """
     wait = WebDriverWait(context.driver, 20)
     input_prod = wait.until(ec.presence_of_element_located((By.XPATH, Locators["INPUT_AREA"])))
