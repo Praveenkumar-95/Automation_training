@@ -1,4 +1,6 @@
 
+Feature: Fetch Company Details
+
   Scenario: Fetching Company Details
     Given He Opened Google Page
     When He Search Company Name "Actualize Consulting Engineers"
@@ -16,3 +18,12 @@
       | g7cr                       |
       | Fime India Private Limited |
       |TCS                         |
+
+
+
+Scenario: Fetch company details and save to CSV
+    Given the user is on the Google search page
+    When the user searches for "actualize consulting engineers"
+    Then the user extracts the company details
+    And the user saves the company details to a CSV file
+
