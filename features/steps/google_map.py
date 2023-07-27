@@ -52,7 +52,11 @@ def saving_details(context, total_count):
     tot = []
     all_link = context.driver.find_element(By.XPATH, "//*[@class='Nv2PK THOPZb CpccDe ']/child::a")
 
+
+    def extracting_details(arg):
+
     def make_csv(arg):
+
         tot_list = set(arg)
         for i in range(len(tot_list)):
             if len(details) > int(total_count):
@@ -100,7 +104,11 @@ def saving_details(context, total_count):
         else:
             tot = context.driver.find_elements(By.XPATH, "//*[@class='Nv2PK THOPZb CpccDe ']/child::a")
             all_link.send_keys(Keys.END)
+
+    extracting_details(set(tot))
+=======
     make_csv(set(tot))
+
 
     field_names = ['name', 'rating', 'address', 'review', 'Log_and_Lat']
     make_csv(set(tot))
